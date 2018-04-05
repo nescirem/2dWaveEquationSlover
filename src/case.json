@@ -1,0 +1,57 @@
+{
+	"grid": { 
+	"fileName": "60x60.msh",
+		"structuredGrid": true,
+		"dimension": 2,
+		"type": "quadrilateral",
+		"scale": 1.0
+	},
+	"boundaryConditions": [
+		{
+			"name": "D",
+			"type": "softwall"
+		},
+		{
+			"name": "T",
+			"type": "softwall"
+		},
+		{
+			"name": "R",
+			"type": "softwall"
+		},
+		{
+			"name": "L",
+			"type": "softwall"
+		}
+	],
+	"acousticSource": [
+		{
+			"position":	"0.5,0.5,0.0",
+			"cellNumber": 5000,
+			"type": "Sin",
+			"pressureAmplitude": 1,
+			"omega": 21641,
+			"TT": 8000
+		}
+	],
+	"physicalParameters": {
+		"material": "air",
+		"rho": 1.29,
+		"soundSpeed": 344
+	},
+	"control": 
+	{	"startTime": 0,
+		"endTime": 0.008,
+		"timeStep": 1e-7
+	},
+	"initialFile": {
+		"particleVelocity": 0,
+		"uu": 0,
+		"vv": 0,
+		"ww": 0,
+		"acousticPressure": 0
+	},
+	"outputControl": {
+		"outputTimes": 100
+	}
+}
